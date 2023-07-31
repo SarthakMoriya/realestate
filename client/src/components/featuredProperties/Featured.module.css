@@ -1,0 +1,103 @@
+.container {
+  height: 100%;
+  width: 100%;
+  margin-top: 7.5rem;
+}
+
+.wrapper {
+  max-width: 1180px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.title > h5 {
+  color: #777;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.title > h2 {
+  color: #333;
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.featuredProperties {
+  margin-top: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.featuredProperties > .featuredProperty > .imgContainer {
+  display: inline-block;
+  height: 350px;
+  width: 80%;
+  margin-bottom: 0.5rem;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.featuredProperties > .featuredProperty > .imgContainer > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: 150ms all;
+}
+.featuredProperties > .featuredProperty > .imgContainer > img:hover {
+  transform: scale(1.035);
+}
+
+.featuredProperty .owner {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.featuredProperty > .details > .priceAndOwner {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.priceAndOwner > .price {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.moreDetails {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 0.5em;
+}
+
+.moreDetails > span {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-right: 1px solid #0707b5;
+  color: #2c2cdc;
+  padding-right: 1.25rem;
+}
+.moreDetails > span:first-child {
+    border:none
+}
+
+.desc{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 18px;
+    max-width: 250px;
+    color:#222;
+}

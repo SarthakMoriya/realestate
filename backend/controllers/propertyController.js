@@ -13,7 +13,7 @@ propertyController.get("/getall", verifyToken, async (req, res) => {
 });
 
 //get featured
-propertyController.get("/find/featured", verifyToken, async (req, res) => {
+propertyController.get("/find/featured", async (req, res) => {
   try {
     const properties = await Property.find({ featured: true }).populate(
       "currentOwner",

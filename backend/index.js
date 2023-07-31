@@ -13,6 +13,9 @@ const app = express();
 app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use('/images',express.static('public/images'))
+// http://localhost:5000/images/
+
 app.use("/auth", authController);
 app.use("/property", propertyController);
 app.use('/upload', uploadController);
