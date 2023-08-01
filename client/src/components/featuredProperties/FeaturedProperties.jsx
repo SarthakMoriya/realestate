@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { Link } from 'react-router-dom'
 import classes from './Featured.module.css'
 
@@ -36,12 +37,12 @@ const FeaturedProperties = () => {
 
               <div key={property?._id} className={classes.featuredProperty}>
                 <Link to={`/propertyDetail/${property._id}`} className={classes.imgContainer}>
-                  {/* <img src={`http://localhost:5000/images/${property?.img}`} alt="" /> */}
-                  <img src={fallbackimg} alt="" />
+                  <img src={`http://localhost:5000/images/${property?.img}`} alt="" />
+                  {/* <img src={fallbackimg} alt="" /> */}
                 </Link>
                 <div className={classes.details}>
                   <div className={classes.priceAndOwner}>
-                    <span className={classes.price}>{property?.price}</span>
+                    <span className={classes.price}>${property?.price}</span>
                     <img src={fallbackuser} alt="" className={classes.owner} />
                   </div>
                   <div className={classes.moreDetails}>

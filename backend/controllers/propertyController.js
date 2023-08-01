@@ -3,7 +3,7 @@ const Property = require("../models/propertyModel.js");
 const verifyToken = require("../middleware/verifyToken.js");
 
 //get all
-propertyController.get("/getall", verifyToken, async (req, res) => {
+propertyController.get("/getall",  async (req, res) => {
   try {
     const properties = await Property.find();
     return res.status(200).json(properties);

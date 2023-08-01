@@ -1,11 +1,20 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import classes from './Hero.module.css'
-import {AiOutlineSearch} from 'react-icons/ai'
+import { AiOutlineSearch } from 'react-icons/ai'
 
 const Hero = () => {
+  const navigate = useNavigate();
   const [type, setType] = useState('beach')
-  const [priceRange, setPriceRange] = useState(100000)
-  const [continent, setContinent] = useState('asia')
+  const [priceRange, setPriceRange] = useState(0)
+  const [continent, setContinent] = useState(0)
+
+  const handleSearch = () => {
+    navigate(`/properties?type=${type}&continent=${continent}&priceRange=${priceRange}`)
+    setType('beach');
+    setPriceRange(1)
+    setContinent('asia')
+  }
   return (
     <div className={classes.container}>
       <div className={classes.wrapper}>
@@ -30,13 +39,13 @@ const Hero = () => {
           </select>
           <select onChange={(e) => { setContinent(e.target.value) }} value={continent}>
             <option disabled>Select Continent</option>
-            <option value='asia'>Asia</option>
-            <option value='africe'>Africe</option>
-            <option value='south'>South America</option>
-            <option value='north'>North America</option>
-            <option value='ocena'>Oceania</option>
+            <option value='0'>Asia</option>
+            <option value='1'>Africe</option>
+            <option value='2'>South America</option>
+            <option value='3'>North America</option>
+            <option value='4'>Oceania</option>
           </select>
-          <AiOutlineSearch className={classes.searchIcon}/>
+          <AiOutlineSearch className={classes.searchIcon} onClick={handleSearch} />
         </div>
       </div>
     </div>
