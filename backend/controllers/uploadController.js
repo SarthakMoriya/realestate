@@ -15,9 +15,9 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 
 //upload.single('image') is goinf to check in the req.body for the req.body.image
-uploadController.post("/images", upload.single("image"), async (req, res) => {
+uploadController.post("/image", upload.single("image"), async (req, res) => {
   try {
-    return res.status(200).json("FIle uploaded successfully!");
+    return res.status(200).json("File uploaded successfully!");
   } catch (error) {
     res.status(500).json(error.message);
   }

@@ -24,7 +24,7 @@ authController.post("/signup", async (req, res) => {
       expiresIn: "7h",
     });
 
-    res.status(200).json({ message: "success", ...others, token });
+    res.status(200).json({ message: "success", others, token });
   } catch (error) {
     res.status(500).status(500).json({ message: error.message });
   }
@@ -46,9 +46,9 @@ authController.post("/login", async (req, res) => {
       expiresIn: "6h",
     });
     const { password1, ...others } = user._doc;
-    res.status(200).json({ message: "success", ...others, token });
+    res.status(200).json({ message: "success", others, token });
   } catch (error) {
-    res.status(500).status(500).json({ message: error.message });
+    res.status(500).status(500).json({ message: "lodaa mera" });
   }
 });
 
