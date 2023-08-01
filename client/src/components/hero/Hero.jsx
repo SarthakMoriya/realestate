@@ -31,19 +31,20 @@ const Hero = () => {
 
           <select onChange={(e) => { setPriceRange(e.target.value) }} value={priceRange}>
             <option disabled>Select Price Range</option>
-            <option value='0'>0-1,00,000</option>
-            <option value='1'>1,00,000-3,00,000</option>
-            <option value='2'>3,00,000-5,00,000</option>
-            <option value='3'>5,00,000-10,00,000</option>
-            <option value='4'>10,00,000+</option>
+            <option value="0">0-100,000</option>
+            <option value="1">100,000-200,000</option>
+            <option value="2">200,000-300,000</option>
+            <option value="3">300,000-400,000</option>
+            <option value="4">400,000-500,000</option>
           </select>
           <select onChange={(e) => { setContinent(e.target.value) }} value={continent}>
             <option disabled>Select Continent</option>
-            <option value='0'>Asia</option>
-            <option value='1'>Africe</option>
-            <option value='2'>South America</option>
-            <option value='3'>North America</option>
-            <option value='4'>Oceania</option>
+            <option value="0">Europe</option>
+            <option value="1">Asia</option>
+            <option value="2">Africa</option>
+            <option value="3">South America</option>
+            <option value="4">North America</option>
+            <option value="5">Oceania</option>
           </select>
           <AiOutlineSearch className={classes.searchIcon} onClick={handleSearch} />
         </div>

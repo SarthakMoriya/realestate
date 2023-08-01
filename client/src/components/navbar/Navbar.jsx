@@ -14,7 +14,7 @@ const Navbar = () => {
   const [state, setState] = useState({});
   const dispatch = useDispatch();
   const { user, token } = useSelector((state) => state.auth)//auth is name of slice
-  console.log(user)
+  // console.log(user)
   const handleLogout = () => {
     dispatch(logout())
   }
