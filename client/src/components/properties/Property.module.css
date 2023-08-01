@@ -98,10 +98,18 @@
   background: #fff;
 }
 
+.properties{
+  margin-top: 3rem;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
 .properties > .property > .imgContainer {
   display: inline-block;
   height: 350px;
-  width: 80%;
+  width: 350px;
   margin-bottom: 0.5rem;
   overflow: hidden;
   cursor: pointer;
@@ -164,6 +172,7 @@
   align-items: center;
   gap: 1rem;
   border-right: 1px solid #0707b5;
+  padding-right: 1.25rem;
   color: #2c2cdc;
 }
 

@@ -92,14 +92,14 @@ const Properties = () => {
     <div className={classes.container}>
       <div className={classes.wrapper}>
         <div className={classes.options}>
-          <select name='type' onChange={(e) => { handleState(e) }}>
+          <select value={state?.type} name='type' onChange={(e) => { handleState(e) }}>
             <option disabled>Select Type</option>
             <option value='mountains'>Mountain</option>
             <option value='beach'>Beach</option>
             <option value='village'>Village</option>
           </select>
 
-          <select name='priceRange' onChange={(e) => { handleState(e) }}>
+          <select value={state?.priceRange} name='priceRange' onChange={(e) => { handleState(e) }}>
             <option disabled>Select Price Range</option>
             <option value="0">0-100,000</option>
             <option value="1">100,000-200,000</option>
@@ -107,7 +107,7 @@ const Properties = () => {
             <option value="3">300,000-400,000</option>
             <option value="4">400,000-500,000</option>
           </select>
-          <select name='continent' onChange={(e) => { handleState(e) }}>
+          <select value={state?.continent} name='continent' onChange={(e) => { handleState(e) }}>
             <option disabled>Select Continent</option>
             <option value="0">Europe</option>
             <option value="1">Asia</option>
@@ -131,7 +131,7 @@ const Properties = () => {
                 return (<div key={property._id} className={classes.property}>
                   <Link
                     className={classes.imgContainer}
-                    to={`property/${property._id}`}>
+                    to={`/propertyDetail/${property._id}`}>
                     <img src={`http://localhost:5000/images/${property.img}`} alt="" />
                   </Link>
                   <div className={classes.details}>
