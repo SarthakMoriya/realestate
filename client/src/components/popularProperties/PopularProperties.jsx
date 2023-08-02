@@ -28,22 +28,21 @@ const PopularProperties = () => {
           <h5>Different Types Of Properties</h5>
           <h2>Best Type Of Properties For You</h2>
         </div>
-
         <div className={classes.properties}>
-          <Link to={`/properties?type=beach&continent=1&priceRange=2`} className={classes.property}>
-            <img src={img1} alt="" />
-            <div className={classes.quantity}>{numberOfProperties.beach} Properties</div>
-            <h5>Beach Properties</h5>
-          </Link>
-          <Link to={`/properties?type=mountain&continent=1&priceRange=2`} className={classes.property}>
+          <Link to={`/properties/type/mountain`} className={classes.property}>
             <img src={img3} alt="" />
             <div className={classes.quantity}>{numberOfProperties.mountain} Properties</div>
             <h5>Mountain Properties</h5>
           </Link>
-          <Link to={`/properties?type=village&continent=1&priceRange=2`} className={classes.property}>
+          <Link to={`/properties/type/village`} className={classes.property}>
             <img src={img2} alt="" />
             <div className={classes.quantity}>{numberOfProperties.village} Properties</div>
             <h5>Village Properties</h5>
+          </Link>
+          <Link to={`/properties/type/beach`} className={classes.property}>
+            <img src={img1} alt="" />
+            <div className={classes.quantity}>{numberOfProperties.beach} Properties</div>
+            <h5>Beach Properties</h5>
           </Link>
         </div>
       </div>
@@ -52,3 +51,19 @@ const PopularProperties = () => {
 }
 
 export default PopularProperties
+
+// <Link to={`/properties?type=beach&continent=1&priceRange=2`} className={classes.property}>
+//   <img src={img1} alt="" />
+//   <div className={classes.quantity}>{numberOfProperties.beach} Properties</div>
+//   <h5>Beach Properties</h5>
+// </Link>
+// <Link to={`/properties?type=mountain&continent=1&priceRange=2`} className={classes.property}>
+//   <img src={img3} alt="" />
+//   <div className={classes.quantity}>{numberOfProperties.mountain} Properties</div>
+//   <h5>Mountain Properties</h5>
+// </Link>
+// <Link to={`/properties?type=village&continent=1&priceRange=2`} className={classes.property}>
+//   <img src={img2} alt="" />
+//   <div className={classes.quantity}>{numberOfProperties.village} Properties</div>
+//   <h5>Village Properties</h5>
+// </Link> 

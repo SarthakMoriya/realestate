@@ -7,6 +7,7 @@ import { FaBed, FaSquareFull } from 'react-icons/fa'
 import classes from './PropertyDetails.module.css'
 import { AiOutlineClose } from 'react-icons/ai'
 import emailjs from '@emailjs/browser'
+import SimiliarProperties from '../similarProperties/SimiliarProperties'
 
 const PropertyDetails = () => {
   const { user } = useSelector(state => state.auth)
@@ -27,7 +28,7 @@ const PropertyDetails = () => {
       try {
         const data = await request(`/property/find/${id}`, 'GET')
         setPropertyDetails(data);
-        // console.log(data)
+        console.log(data)
       } catch (error) {
         console.log(error.message)
       }

@@ -24,7 +24,7 @@ const FeaturedProperties = () => {
 
   useEffect(() => { fetchFeaturedProperties() }, [])
   return (
-    <div className={classes.container}>
+    <div className={classes.container} id='featuredProperties'>
       <div className={classes.wrapper}>
         <div className={classes.title}>
           <h5>Properties You May Like</h5>

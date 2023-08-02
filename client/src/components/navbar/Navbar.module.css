@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 .container {
   width: 100%;
   top: 0;
@@ -40,6 +43,10 @@
 .center > li {
   color: #222;
   transition: 150 all ease-in-out;
+}
+.center > li > a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .center > li:hover {
@@ -112,16 +119,15 @@
   height: 90vh;
   width: 35vw;
   border-radius: 20px;
-
 }
 
-.listPropertyWrapper>h2{
+.listPropertyWrapper > h2 {
   text-align: center;
   margin: 2.5rem 0;
   margin-bottom: 3.5rem;
 }
 
-.listpropertyWrapper>form>div>label{
+.listpropertyWrapper > form > div > label {
   /* display: flex;
   align-items: center;
   justify-content: center;
@@ -130,7 +136,7 @@
   margin-right: 1rem; */
 }
 
-.removeIcon{
+.removeIcon {
   position: absolute;
   top: 1rem;
   right: 1rem;

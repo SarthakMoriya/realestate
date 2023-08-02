@@ -24,7 +24,7 @@ const Hero = () => {
         <div className={classes.options}>
           <select onChange={(e) => { setType(e.target.value) }} value={type}>
             <option disabled>Select Type</option>
-            <option value='mountains'>Mountain</option>
+            <option value='mountain'>Mountain</option>
             <option value='beach'>Beach</option>
             <option value='village'>Village</option>
           </select>

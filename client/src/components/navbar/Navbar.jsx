@@ -62,9 +62,9 @@ const Navbar = () => {
           Real Estate <BsHouseDoor />
         </Link>
         <ul className={classes.center}>
-          <li className={classes.listitem}>Home</li>
+          <li className={classes.listitem}><Link to='/'>Home</Link></li>
           <li className={classes.listitem}>About</li>
-          <li className={classes.listitem}>Featured</li>
+          <li className={classes.listitem}><a href='#featuredProperties'>Featured</a></li>
           <li className={classes.listitem}>Contact</li>
         </ul>
         <div className={classes.right}>
@@ -115,8 +115,8 @@ const Navbar = () => {
             </form>
             <AiOutlineClose onClick={handleCloseForm} className={classes.removeIcon} />
           </div>
-        
-    </div>}
+
+        </div>}
     </div >
   )
 }

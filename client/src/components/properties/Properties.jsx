@@ -16,9 +16,9 @@ const Properties = () => {
   const [filteredProperties, setFilteredProperties] = useState([])
   const navigate = useNavigate();
   const query = useLocation();
-  // console.log(query?.search.slice(1))
+  console.log(query?.search.slice(1))
   const arrQuery = query.search.slice(1).split('&')
-  // console.log(arrQuery)//we got like this: ['type=beach', 'continent=1', 'priceRange=2']
+  console.log(arrQuery)//we got like this: ['type=beach', 'continent=1', 'priceRange=2']
 
   const handleState = (e) => {
     setState(prev => {
@@ -94,7 +94,7 @@ const Properties = () => {
         <div className={classes.options}>
           <select value={state?.type} name='type' onChange={(e) => { handleState(e) }}>
             <option disabled>Select Type</option>
-            <option value='mountains'>Mountain</option>
+            <option value='mountain'>Mountain</option>
             <option value='beach'>Beach</option>
             <option value='village'>Village</option>
           </select>

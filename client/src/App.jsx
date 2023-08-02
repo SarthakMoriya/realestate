@@ -10,6 +10,8 @@ import PopularProperties from './components/popularProperties/PopularProperties'
 import Hero from './components/hero/Hero';
 import Newsletter from './components/newsletter/Newsletter';
 import FeaturedProperties from './components/featuredProperties/FeaturedProperties';
+import ParticularProperties from './components/ParticularProperties/ParticularProperties';
+import SimiliarProperties from './components/similarProperties/SimiliarProperties';
 
 function App() {
 
@@ -36,10 +38,20 @@ function App() {
           </>
         }
         />
+
+        <Route path='/properties/type/:type' element={
+          <>
+            <Navbar />
+            <ParticularProperties />
+            <Footer />
+          </>
+        }
+        />
         <Route path='/propertyDetail/:id' element={
           <>
             <Navbar />
             <PropertyDetails />
+            <SimiliarProperties/>
             <Footer />
           </>
         }

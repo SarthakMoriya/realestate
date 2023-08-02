@@ -3,7 +3,7 @@ const Property = require("../models/propertyModel.js");
 const verifyToken = require("../middleware/verifyToken.js");
 
 //get all
-propertyController.get("/getall",  async (req, res) => {
+propertyController.get("/getall", async (req, res) => {
   try {
     const properties = await Property.find();
     return res.status(200).json(properties);
@@ -44,6 +44,19 @@ propertyController.get("/find", async (req, res) => {
   }
 });
 
+//get all properties from a particular type
+propertyController.get("/find/type/:type1", async (req, res) => {
+  try {
+    const type=req.params.type1;
+    // console.log(type)
+    const properties = await Property.find({ type });
+    // console.log(properties)
+    res.status(200).json(properties);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
+
 //get count of types -> {beach:4 ,mountains:6 ,....}
 propertyController.get("/find/types", async (req, res) => {
   try {
@@ -65,6 +78,7 @@ propertyController.get("/find/types", async (req, res) => {
 propertyController.get("/find/:id", async (req, res) => {
   try {
     const id = req.params.id;
+    // console.log(id)
     const property = await Property.findOne({ _id: id }).populate(
       "currentOwner",
       "-password"

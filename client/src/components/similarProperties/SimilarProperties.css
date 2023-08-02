@@ -1,0 +1,33 @@
+.similar-properties-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.similar-properties-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.titles{
+    text-align: center;
+}
+.similar-properties-box > div {
+    border:1px solid blue;
+    padding: 5px;
+}
+
+.similar-properties-box > div > img {
+  width: 275px;
+  height: 180px;
+}
+
+.similar-properties-box > div > div{
+    text-align: center;
+    font-size: 23px;
+    font-weight: bold;
+}
