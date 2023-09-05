@@ -1,4 +1,5 @@
-const BASE_URL = "http://localhost:5000";
+// const BASE_URL = "http://localhost:5000";
+const BASE_URL = "https://estate-jpzw.onrender.com";
 
 export const request = async (
   url,
@@ -12,7 +13,6 @@ export const request = async (
   switch (method) {
     case "GET":
       res = await fetch(BASE_URL + url, { headers });
-      if (res.status !== 200 && res.status !== 201) throw new Error("ERROR");
       data = await res.json();
       return data;
 
@@ -21,15 +21,15 @@ export const request = async (
       // hence the bonus param
       if (isNotStringified) {
         res = await fetch(BASE_URL + url, { headers, method, body });
-        if (res.status !== 200 && res.status !== 201) throw new Error("ERROR");
         data = await res.json();
+        console.log(data);
       } else {
         res = await fetch(BASE_URL + url, {
           headers,
           method,
           body: JSON.stringify({ ...body }),
         });
-        if (res.status !== 200 && res.status !== 201) throw new Error("ERROR");
+        console.log(data);
         data = await res.json();
       }
       return data;
@@ -40,13 +40,11 @@ export const request = async (
         method,
         body: JSON.stringify(body),
       });
-      if (res.status !== 200 && res.status !== 201) throw new Error("ERROR");
       data = await res.json();
       return data;
 
     case "DELETE":
       res = await fetch(BASE_URL + url, { headers, method });
-      if (res.status !== 200 && res.status !== 201) throw new Error("ERROR");
       data = await res.json();
       return data;
     default:

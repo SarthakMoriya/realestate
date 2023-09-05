@@ -37,7 +37,8 @@ const FeaturedProperties = () => {
 
               <div key={property?._id} className={classes.featuredProperty}>
                 <Link to={`/propertyDetail/${property._id}`} className={classes.imgContainer}>
-                  <img src={`http://localhost:5000/images/${property?.img}`} alt="" />
+                  {/* <img src={`http://localhost:5000/images/${property?.img}`} alt="" /> */}
+                  <img src={`https://estate-jpzw.onrender.com/images/${property?.img}`} alt="" />
                   {/* <img src={fallbackimg} alt="" /> */}
                 </Link>
                 <div className={classes.details}>

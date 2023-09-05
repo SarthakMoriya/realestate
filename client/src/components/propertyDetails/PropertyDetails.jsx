@@ -53,7 +53,8 @@ const PropertyDetails = () => {
     <div className={classes.container}>
       <div className={classes.wrapper}>
         <div className={classes.left}>
-          <img src={`http://localhost:5000/images/${propertyDetails?.img}`} alt="" />
+          {/* <img src={`http://localhost:5000/images/${propertyDetails?.img}`} alt="" /> */}
+          <img src={`https://estate-jpzw.onrender.com/images/${propertyDetails?.img}`} alt="" />
         </div>
         <div className={classes.right}>
           <h3 className={classes.title}>
@@ -73,7 +74,7 @@ const PropertyDetails = () => {
                 <span>Price: $</span>{propertyDetails?.price}
               </span>
               <span style={{ display: "flex", alignItems: "Center", gap: "12px" }}>
-                Owner: <img src={`http://localhost:5000/images/${propertyDetails?.currentOwner?.photoUrl}`} alt="" className={classes.owner} />
+                Owner: <img src={`https://estate-jpzw.onrender.com/images/${propertyDetails?.currentOwner?.photoUrl}`} alt="" className={classes.owner} />
               </span>
             </div>
             <div className={classes.moreDetails}>

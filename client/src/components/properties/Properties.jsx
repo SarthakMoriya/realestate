@@ -132,7 +132,8 @@ const Properties = () => {
                   <Link
                     className={classes.imgContainer}
                     to={`/propertyDetail/${property._id}`}>
-                    <img src={`http://localhost:5000/images/${property.img}`} alt="" />
+                    {/* <img src={`http://localhost:5000/images/${property.img}`} alt="" /> */}
+                    <img src={`https://estate-jpzw.onrender.com/images/${property.img}`} alt="" />
                   </Link>
                   <div className={classes.details}>
                     <div className={classes.priceAndOwner}>

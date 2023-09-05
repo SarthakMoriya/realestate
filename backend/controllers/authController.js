@@ -6,10 +6,11 @@ const Users = require("../models/userModel.js");
 //SIGNUP
 authController.post("/signup", async (req, res) => {
   try {
+    console.log("Request for signup");
     //checking the email
     const user = await Users.findOne({ email: req.body.email });
 
-    if (user) throw new Error("Email already registered!");
+    if (user) throw new Error("email already registered!");
 
     //create new user
     const hashedPassword = await bcrypt.hash(req.body.password, 12);
@@ -26,7 +27,8 @@ authController.post("/signup", async (req, res) => {
 
     res.status(200).json({ message: "success", others, token });
   } catch (error) {
-    res.status(500).status(500).json({ message: error.message });
+    console.log(error.message);
+    res.status(500).json({ message: error.message });
   }
 });
 
@@ -48,7 +50,7 @@ authController.post("/login", async (req, res) => {
     const { password1, ...others } = user._doc;
     res.status(200).json({ message: "success", others, token });
   } catch (error) {
-    res.status(500).status(500).json({ message: "lodaa mera" });
+    res.status(500).status(500).json({ message: error.message });
   }
 });
 

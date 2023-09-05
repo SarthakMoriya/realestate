@@ -38,7 +38,7 @@ const SimiliarProperties = () => {
                 {similarProperties.map(property => {
                     console.log(property?._id)
                     return <div key={property?._id} onClick={() => { navigate(`/propertyDetail/${property?._id}`) }}>
-                        <img src={`http://localhost:5000/images/${property?.img}`} alt="" />
+                        <img src={`https://estate-jpzw.onrender.com/images/${property?.img}`} alt="" />
                         <div className="text-5xl">{property.title}</div>
                     </div>
                 })}
